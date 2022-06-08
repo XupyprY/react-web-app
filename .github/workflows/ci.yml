@@ -42,4 +42,4 @@ jobs:
           npx wait-on --timeout 60000
       - name: Run visual tests 👁
         run: |
-          echo npm run test:visual
+          npm run test:visual

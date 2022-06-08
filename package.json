@@ -9,12 +9,14 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
+    "@wdio/cli": "^7.20.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:visual": "wdio run ./wdio.conf.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +36,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.20.1",
+    "@wdio/mocha-framework": "^7.20.0",
+    "@wdio/spec-reporter": "^7.20.0",
+    "@wdio/sync": "^7.20.1",
+    "chromedriver": "^102.0.0",
+    "wdio-chromedriver-service": "^7.3.2"
   }
 }
