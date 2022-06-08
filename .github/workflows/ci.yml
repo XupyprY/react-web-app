@@ -29,23 +29,17 @@ jobs:
         run: |
           echo first
           pwd
-          ls
-          cd react-web-app
           npm ci
       - name: Build the app 🏗 🐤
         run: |
-          cd react-web-app
           npm run build
       - name: Run component tests 🔸
         run: |
-          cd react-web-app
           npm run test
       - name: Start the app 📤
         run: |
-          cd react-web-app
           npm start &
           npx wait-on --timeout 60000
       - name: Run visual tests 👁
         run: |
-          cd react-web-app
           npm run test:visual
