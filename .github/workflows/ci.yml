@@ -27,10 +27,12 @@ jobs:
       - name: Install dependencies 📦
         #Using npm ci is generally faster than running npm install
         run: |
+          pwd
           cd 60_react_testing_azure
           npm ci
       - name: Build the app 🏗 🐤
         run: |
+          pwd
           cd 60_react_testing_azure
           npm run build
       - name: Run component tests 🔸
