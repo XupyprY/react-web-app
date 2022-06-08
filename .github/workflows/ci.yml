@@ -29,24 +29,23 @@ jobs:
         run: |
           echo first
           pwd
-          cd 60_react_testing_azure
+          ll
+          cd react-web-app
           npm ci
       - name: Build the app 🏗 🐤
         run: |
-          echo second
-          pwd
-          cd 60_react_testing_azure
+          cd react-web-app
           npm run build
       - name: Run component tests 🔸
         run: |
-          cd 60_react_testing_azure
+          cd react-web-app
           npm run test
       - name: Start the app 📤
         run: |
-          cd 60_react_testing_azure
+          cd react-web-app
           npm start &
           npx wait-on --timeout 60000
       - name: Run visual tests 👁
         run: |
-          cd 60_react_testing_azure
+          cd react-web-app
           npm run test:visual
